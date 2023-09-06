@@ -36,12 +36,31 @@ public class SurveyService {
         return surveys;
     }
 
-    public Survey findById(String id) {
+    public Survey findSurveyById(String id) {
         Predicate<? super Survey> predicate = survey -> Objects.equals(survey.getId(), id);
-
         Optional<Survey> optionalSurvey
                 = surveys.stream().filter(predicate).findFirst();
 
         return optionalSurvey.orElse(null);
+    }
+
+    public List<Question> retrieveAllSurveyQuestions(String surveyId) {
+        Survey survey = findSurveyById(surveyId);
+
+        if (survey == null) return null;
+
+        return survey.getQuestions();
+    }
+
+    public Question findSurveyQuestionById(String surveyId, String questionId) {
+        List<Question> questions = retrieveAllSurveyQuestions(surveyId);
+
+        if (questions == null) return null;
+
+        Predicate<? super Question> predicate = question -> Objects.equals(question.getId(), questionId);
+        Optional<Question> optionalQuestion
+                = questions.stream().filter(predicate).findFirst();
+
+        return optionalQuestion.orElse(null);
     }
 }

@@ -18,18 +18,40 @@ public class SurveyResource {
     }
 
     @RequestMapping("/surveys")
-    public List<Survey> index() {
+    public List<Survey> surveyIndex() {
         return surveyService.retrieveAllSurveys();
     }
 
-    @RequestMapping("/surveys/{id}")
-    public Survey show(@PathVariable String id) {
-        Survey survey = surveyService.findById(id);
+    @RequestMapping("/surveys/{surveyId}")
+    public Survey showSurvey(@PathVariable String surveyId) {
+        Survey survey = surveyService.findSurveyById(surveyId);
 
         if (survey == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
 
         return survey;
+    }
+
+    @RequestMapping("/surveys/{surveyId}/questions")
+    public List<Question> questionIndex(@PathVariable String surveyId) {
+        List<Question> questions = surveyService.retrieveAllSurveyQuestions(surveyId);
+
+        if (questions == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+
+        return questions;
+    }
+
+    @RequestMapping("/surveys/{surveyId}/questions/{questionId}")
+    public Question questionIndex(@PathVariable String surveyId, @PathVariable String questionId) {
+        Question question = surveyService.findSurveyQuestionById(surveyId, questionId);
+
+        if (question == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+
+        return question;
     }
 }
