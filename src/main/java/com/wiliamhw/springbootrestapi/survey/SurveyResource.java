@@ -45,7 +45,7 @@ public class SurveyResource {
     }
 
     @RequestMapping("/surveys/{surveyId}/questions/{questionId}")
-    public Question questionIndex(@PathVariable String surveyId, @PathVariable String questionId) {
+    public Question questionShow(@PathVariable String surveyId, @PathVariable String questionId) {
         Question question = surveyService.findSurveyQuestionById(surveyId, questionId);
 
         if (question == null) {
