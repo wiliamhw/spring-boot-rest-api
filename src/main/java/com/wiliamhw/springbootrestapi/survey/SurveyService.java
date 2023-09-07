@@ -77,4 +77,13 @@ public class SurveyService {
         SecureRandom secureRandom = new SecureRandom();
         return new BigInteger(32, secureRandom).toString();
     }
+
+    public boolean deleteSurveyQuestion(String surveyId, String questionId) {
+        List<Question> questions = retrieveAllSurveyQuestions(surveyId);
+
+        if (questions == null) return false;
+
+        Predicate<? super Question> predicate = question -> Objects.equals(question.getId(), questionId);
+        return questions.removeIf(predicate);
+    }
 }

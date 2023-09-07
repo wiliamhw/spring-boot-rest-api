@@ -65,4 +65,11 @@ public class SurveyResource {
 
         return ResponseEntity.created(location).build();
     }
+
+    @RequestMapping(value = "/surveys/{surveyId}/questions/{questionId}", method = RequestMethod.DELETE)
+    public ResponseEntity<Object> destroyQuestion(@PathVariable String surveyId, @PathVariable String questionId) {
+        boolean deleted = surveyService.deleteSurveyQuestion(surveyId, questionId);
+
+        return deleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
+    }
 }
