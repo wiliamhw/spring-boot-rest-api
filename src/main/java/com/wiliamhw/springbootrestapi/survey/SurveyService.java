@@ -2,6 +2,8 @@ package com.wiliamhw.springbootrestapi.survey;
 
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
+import java.security.SecureRandom;
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -62,5 +64,17 @@ public class SurveyService {
                 = questions.stream().filter(predicate).findFirst();
 
         return optionalQuestion.orElse(null);
+    }
+
+    public String storeSurveyQuestion(String surveyId, Question question) {
+        List<Question> questions = retrieveAllSurveyQuestions(surveyId);
+        question.setId(generateRandomId());
+        questions.add(question);
+        return question.getId();
+    }
+
+    private String generateRandomId() {
+        SecureRandom secureRandom = new SecureRandom();
+        return new BigInteger(32, secureRandom).toString();
     }
 }
