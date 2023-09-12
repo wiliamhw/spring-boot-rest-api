@@ -1,0 +1,1430 @@
+{
+	"info": {
+		"_postman_id": "5832aca1-3675-4c58-8806-db3b48a6aa45",
+		"name": "Spring Boot Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15484614"
+	},
+	"item": [
+		{
+			"name": "Surveys",
+			"item": [
+				{
+					"name": "Questions",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/surveys/:survey_id/questions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"surveys",
+										":survey_id",
+										"questions"
+									],
+									"variable": [
+										{
+											"key": "survey_id",
+											"value": "Survey1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Index",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://127.0.0.1:8080/surveys/:survey_id/questions",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"surveys",
+												":survey_id",
+												"questions"
+											],
+											"variable": [
+												{
+													"key": "survey_id",
+													"value": "Survey1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Sep 2023 12:23:39 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"Question1\",\n        \"description\": \"Most Popular Cloud Platform Today\",\n        \"options\": [\n            \"AWS\",\n            \"Azure\",\n            \"Google Cloud\",\n            \"Oracle Cloud\"\n        ],\n        \"correctAnswer\": \"AWS\"\n    },\n    {\n        \"id\": \"Question2\",\n        \"description\": \"Fastest Growing Cloud Platform\",\n        \"options\": [\n            \"AWS\",\n            \"Azure\",\n            \"Google Cloud\",\n            \"Oracle Cloud\"\n        ],\n        \"correctAnswer\": \"Google Cloud\"\n    },\n    {\n        \"id\": \"Question3\",\n        \"description\": \"Most Popular DevOps Tool\",\n        \"options\": [\n            \"Kubernetes\",\n            \"Docker\",\n            \"Terraform\",\n            \"Azure DevOps\"\n        ],\n        \"correctAnswer\": \"Kubernetes\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/surveys/:survey_id/questions/:question_id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"surveys",
+										":survey_id",
+										"questions",
+										":question_id"
+									],
+									"variable": [
+										{
+											"key": "survey_id",
+											"value": "Survey1"
+										},
+										{
+											"key": "question_id",
+											"value": "Question1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Show",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/surveys/:survey_id/questions/:question_id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"surveys",
+												":survey_id",
+												"questions",
+												":question_id"
+											],
+											"variable": [
+												{
+													"key": "survey_id",
+													"value": "Survey1"
+												},
+												{
+													"key": "question_id",
+													"value": "Question1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Sep 2023 12:23:45 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"Question1\",\n    \"description\": \"Most Popular Cloud Platform Today\",\n    \"options\": [\n        \"AWS\",\n        \"Azure\",\n        \"Google Cloud\",\n        \"Oracle Cloud\"\n    ],\n    \"correctAnswer\": \"AWS\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"Question4\",\n    \"description\": \"Your Favorite Cloud Platform\",\n    \"options\": [\n        \"AWS\",\n        \"Azure\",\n        \"Google Cloud\",\n        \"Oracle Cloud\"\n    ],\n    \"correctAnswer\": \"Google Cloud\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/surveys/:survey_id/questions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"surveys",
+										":survey_id",
+										"questions"
+									],
+									"variable": [
+										{
+											"key": "survey_id",
+											"value": "Survey1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Store",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": \"Question4\",\n    \"description\": \"Your Favorite Cloud Platform\",\n    \"options\": [\n        \"AWS\",\n        \"Azure\",\n        \"Google Cloud\",\n        \"Oracle Cloud\"\n    ],\n    \"correctAnswer\": \"Google Cloud\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/surveys/:survey_id/questions",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"surveys",
+												":survey_id",
+												"questions"
+											],
+											"variable": [
+												{
+													"key": "survey_id",
+													"value": "Survey1"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Location",
+											"value": "http://127.0.0.1:8080/surveys/Survey1/questions/172159976"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Sep 2023 12:24:05 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/surveys/:survey_id/questions/:question_id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"surveys",
+										":survey_id",
+										"questions",
+										":question_id"
+									],
+									"variable": [
+										{
+											"key": "survey_id",
+											"value": "Survey1"
+										},
+										{
+											"key": "question_id",
+											"value": "Question1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/surveys/:survey_id/questions/:question_id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"surveys",
+												":survey_id",
+												"questions",
+												":question_id"
+											],
+											"variable": [
+												{
+													"key": "survey_id",
+													"value": "Survey1"
+												},
+												{
+													"key": "question_id",
+													"value": "Question1"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 12 Sep 2023 12:24:17 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/surveys",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"surveys"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/surveys",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"surveys"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Sep 2023 12:24:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"Survey1\",\n        \"title\": \"My Favorite Survey\",\n        \"description\": \"Description of the Survey\",\n        \"questions\": [\n            {\n                \"id\": \"Question2\",\n                \"description\": \"Fastest Growing Cloud Platform\",\n                \"options\": [\n                    \"AWS\",\n                    \"Azure\",\n                    \"Google Cloud\",\n                    \"Oracle Cloud\"\n                ],\n                \"correctAnswer\": \"Google Cloud\"\n            },\n            {\n                \"id\": \"Question3\",\n                \"description\": \"Most Popular DevOps Tool\",\n                \"options\": [\n                    \"Kubernetes\",\n                    \"Docker\",\n                    \"Terraform\",\n                    \"Azure DevOps\"\n                ],\n                \"correctAnswer\": \"Kubernetes\"\n            },\n            {\n                \"id\": \"2799319839\",\n                \"description\": \"Your Favorite Cloud Platform\",\n                \"options\": [\n                    \"AWS\",\n                    \"Azure\",\n                    \"Google Cloud\",\n                    \"Oracle Cloud\"\n                ],\n                \"correctAnswer\": \"Google Cloud\"\n            },\n            {\n                \"id\": \"172159976\",\n                \"description\": \"Your Favorite Cloud Platform\",\n                \"options\": [\n                    \"AWS\",\n                    \"Azure\",\n                    \"Google Cloud\",\n                    \"Oracle Cloud\"\n                ],\n                \"correctAnswer\": \"Google Cloud\"\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/surveys/:survey_id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"surveys",
+								":survey_id"
+							],
+							"variable": [
+								{
+									"key": "survey_id",
+									"value": "Survey1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/surveys/:survey_id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"surveys",
+										":survey_id"
+									],
+									"variable": [
+										{
+											"key": "survey_id",
+											"value": "Survey1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Sep 2023 12:24:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"Survey1\",\n    \"title\": \"My Favorite Survey\",\n    \"description\": \"Description of the Survey\",\n    \"questions\": [\n        {\n            \"id\": \"Question2\",\n            \"description\": \"Fastest Growing Cloud Platform\",\n            \"options\": [\n                \"AWS\",\n                \"Azure\",\n                \"Google Cloud\",\n                \"Oracle Cloud\"\n            ],\n            \"correctAnswer\": \"Google Cloud\"\n        },\n        {\n            \"id\": \"Question3\",\n            \"description\": \"Most Popular DevOps Tool\",\n            \"options\": [\n                \"Kubernetes\",\n                \"Docker\",\n                \"Terraform\",\n                \"Azure DevOps\"\n            ],\n            \"correctAnswer\": \"Kubernetes\"\n        },\n        {\n            \"id\": \"2799319839\",\n            \"description\": \"Your Favorite Cloud Platform\",\n            \"options\": [\n                \"AWS\",\n                \"Azure\",\n                \"Google Cloud\",\n                \"Oracle Cloud\"\n            ],\n            \"correctAnswer\": \"Google Cloud\"\n        },\n        {\n            \"id\": \"172159976\",\n            \"description\": \"Your Favorite Cloud Platform\",\n            \"options\": [\n                \"AWS\",\n                \"Azure\",\n                \"Google Cloud\",\n                \"Oracle Cloud\"\n            ],\n            \"correctAnswer\": \"Google Cloud\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "User Details",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userDetailses",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userDetailses"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "name",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/userDetailses",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"userDetailses"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "name",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/hal+json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Sep 2023 12:26:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_embedded\": {\n        \"userDetailses\": [\n            {\n                \"name\": \"Ranga\",\n                \"role\": \"Admin\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://127.0.0.1:8080/userDetailses/202\"\n                    },\n                    \"userDetails\": {\n                        \"href\": \"http://127.0.0.1:8080/userDetailses/202\"\n                    }\n                }\n            },\n            {\n                \"name\": \"Ravi\",\n                \"role\": \"Admin\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://127.0.0.1:8080/userDetailses/203\"\n                    },\n                    \"userDetails\": {\n                        \"href\": \"http://127.0.0.1:8080/userDetailses/203\"\n                    }\n                }\n            },\n            {\n                \"name\": \"John\",\n                \"role\": \"User\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://127.0.0.1:8080/userDetailses/204\"\n                    },\n                    \"userDetails\": {\n                        \"href\": \"http://127.0.0.1:8080/userDetailses/204\"\n                    }\n                }\n            }\n        ]\n    },\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://127.0.0.1:8080/userDetailses?page=0&size=20\"\n        },\n        \"profile\": {\n            \"href\": \"http://127.0.0.1:8080/profile/userDetailses\"\n        },\n        \"search\": {\n            \"href\": \"http://127.0.0.1:8080/userDetailses/search\"\n        }\n    },\n    \"page\": {\n        \"size\": 20,\n        \"totalElements\": 3,\n        \"totalPages\": 1,\n        \"number\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userDetailses/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userDetailses",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "202"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/userDetailses/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"userDetailses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "202"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/hal+json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Sep 2023 12:26:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Ranga\",\n    \"role\": \"Admin\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://127.0.0.1:8080/userDetailses/202\"\n        },\n        \"userDetails\": {\n            \"href\": \"http://127.0.0.1:8080/userDetailses/202\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"David\",\n    \"role\": \"guard\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/userDetailses",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userDetailses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"David\",\n    \"role\": \"guard\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/userDetailses",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"userDetailses"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:8080/userDetailses/303"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/hal+json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Sep 2023 12:26:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"David\",\n    \"role\": \"guard\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://127.0.0.1:8080/userDetailses/303\"\n        },\n        \"userDetails\": {\n            \"href\": \"http://127.0.0.1:8080/userDetailses/303\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"David\",\n    \"role\": \"guard1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/userDetailses/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userDetailses",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "303"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"David\",\n    \"role\": \"guard1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/userDetailses/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"userDetailses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "303"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:8080/userDetailses/303"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/hal+json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Sep 2023 12:27:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"David\",\n    \"role\": \"guard1\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://127.0.0.1:8080/userDetailses/303\"\n        },\n        \"userDetails\": {\n            \"href\": \"http://127.0.0.1:8080/userDetailses/303\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userDetailses/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userDetailses",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "303"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/userDetailses/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"userDetailses",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "303"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/hal+json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Sep 2023 12:27:28 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"David\",\n    \"role\": \"guard1\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://127.0.0.1:8080/userDetailses/303\"\n        },\n        \"userDetails\": {\n            \"href\": \"http://127.0.0.1:8080/userDetailses/303\"\n        }\n    }\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{username}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "resource",
+			"value": ""
+		},
+		{
+			"key": "sub_resource",
+			"value": ""
+		}
+	]
+}
